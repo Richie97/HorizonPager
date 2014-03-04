@@ -40,3 +40,7 @@ hbo-android/assets/android.properties
 
 #Python
 *.class
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
