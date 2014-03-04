@@ -21,7 +21,7 @@ public class PageTransform implements ViewPager.PageTransformer {
             view.findViewById(R.id.color).setAlpha(1 + position);
 
             // Animate down over the "horizon"
-            view.setTranslationY(pageWidth * -(position + -position));
+            view.setTranslationY(pageWidth * -(position + position));
 
             // Scale the page down (between MIN_SCALE and 1)
             float scaleFactor = MIN_SCALE
