@@ -1,0 +1,42 @@
+*.DS_Store
+
+# Android
+hbo-android/libs/*javadoc*
+hbo-android/libs/*sources*
+hbo-android/libs/**/*.so
+/**/gen/*
+hbo-android/local.properties
+out/*
+hbo-android/bin/*
+hbo-android/lint.xml
+hbo-android/classes/*
+classes/*
+libs/*
+hbo-android/*.log
+
+# Maven
+gen-external-apklibs/*
+/hbo-android/gen-external-apklibs/*
+/**/target/*
+pom.xml.releaseBackup
+release.properties
+tmp/*
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.eml
+.idea/*
+
+# Eclipse
+.settings/*
+*.userlibraries
+.classpath
+.project
+
+# Develop
+hbo-android/assets/android.properties
+
+#Python
+*.class
