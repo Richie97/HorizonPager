@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class ColorFragment extends Fragment {
 
-    public static int[] colors = new int[]{0xffff0000, 0xff00ff00, 0xff0000ff};
+    public static int[] colors = new int[]{R.drawable.arrow, R.drawable.arrow_blue};
 
     public static Fragment newInstance(int color){
         Bundle bundle = new Bundle();
@@ -30,6 +30,6 @@ public class ColorFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.color).setBackgroundColor(colors[new Random().nextInt(colors.length -1)]);
+        view.findViewById(R.id.color).setBackgroundResource(colors[new Random().nextInt(colors.length)]);
     }
 }
