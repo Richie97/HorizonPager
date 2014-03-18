@@ -43,7 +43,7 @@ public class MainActivity extends FragmentActivity {
                 });
 
             }
-        }, 2000, 5000);
+        }, 5000, 2000);
     }
 
     private class ExampleAdapter extends FragmentPagerAdapter {
