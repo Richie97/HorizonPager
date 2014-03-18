@@ -3,6 +3,7 @@ package com.horizonpager;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.ViewConfiguration;
 import android.view.animation.Interpolator;
 
 import java.lang.reflect.Field;
@@ -28,6 +29,8 @@ public class ViewPagerWithDuration extends VerticalViewPager {
      * duration
      */
     private void postInitViewPager() {
+        ViewConfiguration viewConfiguration = ViewConfiguration.get(getContext());
+        mTouchSlop = (viewConfiguration.getScaledTouchSlop());
         try {
             Field scroller = VerticalViewPager.class.getDeclaredField("mScroller");
             scroller.setAccessible(true);

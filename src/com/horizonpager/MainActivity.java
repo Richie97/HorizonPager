@@ -33,7 +33,7 @@ public class MainActivity extends FragmentActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        pager.setScrollDurationFactor(10);
+                        pager.setScrollDurationFactor(8);
                         pager.setCurrentItem(pager.getCurrentItem() + 1);
                         if(pager.getCurrentItem() == pager.getAdapter().getCount() - 1){
                             timer.cancel();
@@ -43,7 +43,7 @@ public class MainActivity extends FragmentActivity {
                 });
 
             }
-        }, 2000, 2000);
+        }, 2000, 5000);
     }
 
     private class ExampleAdapter extends FragmentPagerAdapter {

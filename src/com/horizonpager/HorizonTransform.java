@@ -7,7 +7,7 @@ import android.view.View;
  * Created by ericrichardson on 3/4/14.
  */
 public class HorizonTransform implements ViewPager.PageTransformer {
-    private static final float MIN_SCALE = 0.35f;
+    private static final float MIN_SCALE = 0.25f;
 
     public void transformPage(View view, float position) {
         int pageHeight = view.getHeight();
@@ -24,7 +24,7 @@ public class HorizonTransform implements ViewPager.PageTransformer {
                 // Animate down over the "horizon"
                 view.setTranslationY(pageHeight * -(position - (position / (8 + position))));
             }else{
-                view.setTranslationY(pageHeight * -(position - (position / (8 - 0.7f - (position + 0.7f)))));
+                view.setTranslationY(pageHeight * -(position - (position / (8 - 0.7f + (position + 0.7f)))));
             }
 
 
